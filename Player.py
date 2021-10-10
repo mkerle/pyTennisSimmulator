@@ -1,12 +1,17 @@
 
 class Player(object):
 
-    def __init__(self, _name, _randFunc):
+    def __init__(self, _name, _servRandFunc, _returnRandFunc):
 
         self.name = _name
-        self.randFunc = _randFunc
+        self.serveFunc = _servRandFunc
+        self.returnFunc = _returnRandFunc
 
-    def getRandValue(self):
+    def getServiceRandValue(self):
 
-        return self.randFunc()
+        return self.serveFunc()
+
+    def getReturnRandValue(self):
+
+        return self.returnFunc()
 

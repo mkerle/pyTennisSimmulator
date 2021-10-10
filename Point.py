@@ -9,8 +9,8 @@ class Point(object):
 
     def playPoint(self):
 
-        self.p1RandVal = self.p1.getRandValue()
-        self.p2RandVal = self.p2.getRandValue()
+        self.p1RandVal = self.p1.getServiceRandValue()
+        self.p2RandVal = self.p2.getReturnRandValue()
 
     def getPointWinner(self):
 

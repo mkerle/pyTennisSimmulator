@@ -14,13 +14,23 @@ class Set(object):
 
     def playSet(self):
 
+        server = self.p1
+        receiver = self.p2
         while (not self.isSetComplete()):
-            game = Game(self.p1, self.p2)
+            game = Game(server, receiver)
             game.playGame()
 
             self.updateSetScore(game.getGameWinner()['object'], game.getGameLooser()['object'])
 
             self.games.append(game)
+
+            # change server
+            tmp = server
+            server = receiver
+            receiver = tmp
+
+
+
 
     def updateSetScore(self, winner, looser):
 
